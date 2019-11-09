@@ -1,0 +1,138 @@
+/**
+ * 3.1 - Header
+ */
+
+.site-header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #3b5998;
+  @extend .clearfix;
+}
+
+.site-logo,
+.header-search {
+  float: left;
+}
+
+.site-logo {
+  margin-right: 7px;
+}
+
+.header-search {
+  position: relative;
+
+  &__bar {
+    width: 445px;
+    height: 24px;
+    padding: 0 7px;
+    border-radius: 2px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45px;
+    background-color: #f6f7f9;
+    border-radius: 0 2px 2px 0;
+
+    &:before {
+      content: "\f002"; // fas-search
+      @extend .icon;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #333;
+    }
+  }
+}
+
+.header-right {
+  float: right;
+  @extend .clearfix;
+}
+
+.header-links {
+  float: left;
+  @extend .clearfix;
+
+  &__item {
+    float: left;
+  }
+
+  &__button {
+    display: block;
+    padding: 0 8px;
+    line-height: 24px;
+    border-right: 1px solid #365089;
+    font-weight: 500;
+    color: #fff;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: #29487d;
+    }
+  }
+
+  &__count {
+    padding: 3px;
+    margin-left: 3px;
+    background-color: #29487d;
+    font-size: 12px;
+  }
+}
+
+.header-icons {
+  float: left;
+  cursor: context-menu;
+
+  &__item {
+    display: inline-block;
+    padding-left: 10px;
+    vertical-align: middle;
+
+    &--divider {
+      padding-right: 10px;
+      border-right: 1px solid #365089;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: media_url('header-icons-sprites.png') no-repeat;
+    transition: opacity .3s ease;
+    cursor: pointer;
+
+    &--friends {
+      background-position: -10px -10px;
+    }
+
+    &--messages {
+      background-position: -52px -10px;
+    }
+
+    &--notifications {
+      background-position: -94px -10px;
+    }
+
+    &--help {
+      background-position: -136px -10px;
+    }
+
+    &--caret {
+      background-position: -178px -10px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

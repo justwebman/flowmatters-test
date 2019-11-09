@@ -1,0 +1,69 @@
+@function media_url( $file-name ) {
+  $result: url("../images/#{$file-name}");
+
+  @return $result;
+}
+
+@mixin grid-container {
+  max-width: $grid-container-width;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin triangle( $position, $size, $color ) {
+  width: 0;
+  height: 0;
+
+  @if $position == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $position == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if $position == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if $position == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+@mixin placeholder( $font-size, $color ) {
+  ::placeholder {
+    font-size: $font-size;
+    color: $color;
+    opacity: 1; /* Firefox */
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: $font-size;
+    color: $color;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: $font-size;
+    color: $color;
+  }
+
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: $font-size;
+    color: $color;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: $font-size;
+    color: $color;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: $font-size;
+    color: $color;
+  }
+}

@@ -1,0 +1,53 @@
+@import "scss/setup/variables";
+@import "scss/setup/mixins";
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Libraries
+ *   1.1 - Normalize
+ *   1.2 - Slick Slider
+ * 2.0 - Setup
+ *   2.1 - Customization
+ * 3.0 - Global Layout
+ *   3.1 - Header
+ *   3.2 - Sidebar
+ *   3.3 - Content
+ * 4.0 - Global Responsive
+ *   4.1 - Extra Large
+ *   4.2 - Large
+ *   4.3 - Medium
+ *   4.4 - Small
+ *   4.5 - Extra Small
+ */
+
+
+/**
+ * 1.0 - Libraries
+ */
+
+@import "scss/libraries/normalize";
+@import "scss/libraries/slick-slider";
+
+
+/**
+ * 2.0 - Setup
+ */
+
+@import "scss/setup/customization";
+
+
+/**
+ * 3.0 - Global Layout
+ */
+
+@import "scss/layout/header";
+@import "scss/layout/sidebar";
+@import "scss/layout/content";
+
+
+/**
+ * 4.0 - Global Responsive
+ */
+
+@import "scss/layout/responsive";
